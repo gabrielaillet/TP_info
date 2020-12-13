@@ -96,7 +96,6 @@ def DPLL(Cnf, heuristics=1, want_mod=True):
     back_track_val += [value_vector.copy()]
 
     while (new_cnf != []) and ([] not in new_cnf):
-
         check = False
 
         '''Mono-literal rule'''
@@ -309,10 +308,9 @@ def DPLL(Cnf, heuristics=1, want_mod=True):
             new_cnf = simplify_clause_literal(new_cnf, chosen_lit).copy()
             if (new_cnf != []) and ([] not in new_cnf):
                 back_track_list += [new_cnf]
-                back_track_val += [value_vector.copy()]
             back_track_litt += [chosen_lit]
         if not want_mod:
-            return False
+            return False,
         return mod
     else:
         return True

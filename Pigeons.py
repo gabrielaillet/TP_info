@@ -118,3 +118,12 @@ def time_dpll_pigeons_range(n, s, heuristic=1, want_mod=True):
         x.append(k)
         time_list.append(time_dpll_pigeon_once(k, heuristic, want_mod))
     return x, time_list
+
+
+
+a = pigeons(4)
+c = a[1]
+b = a[2]
+print(len(a[1]))
+a = DPLL(b,2,want_mod=True)
+print(a[1])

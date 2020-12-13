@@ -173,3 +173,12 @@ def time_dpll_dames_range(n, s, heuristic=1, want_mod=True):
         x.append(k)
         time_list.append(time_dpll_dames_once(k, heuristic, want_mod))
     return x, time_list
+
+
+
+a = dames(6)
+c = a[1]
+b = a[2]
+print(len(a[1]))
+a = DPLL(b,2,want_mod=True)
+print(a[1])
